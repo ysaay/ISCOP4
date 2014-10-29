@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+	
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+
+    </style>
+</head>
+<body class="animated fadeIn">
+      <!-- START -->
+    <div data-role="header" data-theme="b"  align="center" data-position="fixed" style="height:12%;">
+       <img src="img/banner1.PNG" width="100%"/>
+    </div>
+    <!--END -->
+    
+    <div class="list">
+    	<div style="text-align:center;">
+    		<img src="img/historyicon.png" style="border-radius 25%; margin-top: 30px;">
+    	</div>
+		<p style="padding:15px;font-family: 'Open Sans';text-align:justify; font-size:18px;">
+			
+			Gordon College, also known as Dalubhasaang Gordon in Filipino, is a local government-funded college in Olongapo City, Philippines. It was founded on February 24, 1999 by virtue of City Ordinance No. 9, and is composed of four constituent colleges: College of Computer Studies, College of Business and Accountancy, College of Education, and College of Nursing. Other academic units include the School of Midwifery, Department of Vocational Technology, Faculty of Arts and Sciences, Center for Research and Development, and Institute of Graduate Studies. As of now, Gordon College - College of Computer Studies is an active member and pioneer school in Asia Pacific to roll-out BlackBerry Academic Program. GC-CCS is also academic partner of IBM DB2.GC-CCS program (BSIT , BSCS , ACT) is currently accredited Level 1.
+		</p>
+    </div>
+
+	<!--STARTT menu-->
+		<div class="">
+			<a href="menu.html">
+				<button class="btn col-lg-15 col-md-15 col-sm-15 col-xs-15 btn-success"><i class="fa fa-bars"></i> Menu</button>
+			</a>
+		</div>
+		<!-- end Menu -->
+	
+	
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+    });    
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+         body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+			position:relative;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+        .menus {
+            top:0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .menus > div {
+            padding-top: 35px;
+            padding-top: 0px;
+        }
+        
+        .menus > div > a{
+            text-decoration: none;
+        }
+
+       
+       
+        
+        .menu-icon {
+            text-align: center;
+        }
+        .icon-label {
+            padding: 20px;
+            text-align: center;
+            color: #3F3F3F;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 12px;
+            text-decoration: none;
+        }
+       
+        .menu-icon > i {
+            font-size: 50px;
+            color: #3F3F3F;
+        }
+        
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        
+         .forward {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+			
+        }
+        
+        .menu {
+            z-index: 1;
+           color: #C2C2C2;
+        }
+		.menu-1{
+			background:#f2c311;
+			
+		}
+		.menu-2{
+			background:rgba(42,128,185,.9);
+			
+		}.menu-3{
+			background:rgba(42,128,185,.9);
+			background:#27ae61;
+		}
+		.menu-4{
+			background:#ecf0f1;
+		}
+		.menu-5{
+			background:#fa5647;
+		}.menu-6{
+			background:#1bbc9d;
+		}
+		.menu-item{
+			padding:2em;
+			
+			min-height:15em;
+		}
+		.menu-item:hover{
+			background:#a9f198;
+			
+		}
+		.col-lg-12{
+			margin:0;
+			padding:0;
+		}
+		a:hover{
+			text-decoration:none;
+		}
+    </style>
+</head>
+<body class="animated fadeIn">
+       <!-- START -->
+    <div data-role="header" data-theme="b"  align="center" data-position="fixed" style="height:12%;">
+       <img src="img/banner1.PNG" width="100%"/>
+    </div>
+    <!--END -->
+    <div class="menus">
+	<!-- row1  START-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		
+	        <div class="menu-1 menu-item col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	            <a href="available-schedule.html">
+	            <div class="menu-icon">
+	               <i class="fa fa-graduation-cap"></i>
+	               <div class="icon-label">AVAILABLE SCHEDULE</div>
+	            </div>
+	            </a>
+	        </div>
+	        
+	        <div class="menu-2 menu-item col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	            <a href="duty-information.html">
+	            <div class="menu-icon">
+	               <i class="fa fa-graduation-cap"></i>
+	               <div class="icon-label">DUTY INFORMATION</div>
+	            </div>
+	            </a>
+	        </div>
+	    </div><!-- row1  END-->
+		
+		<!-- row1  START-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	
+	         <div class="menu-3 menu-item col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	            <a href="add-available-schedule.html">
+	            <div class="menu-icon">
+	               <i class="fa fa-plus"></i>
+	               <div class="icon-label">ADD AVAILABLE SCHEDULE</div>
+	            </div>
+	            </a>
+	        </div>
+	        
+	        <div class="menu-4 menu-item col-lg-6 col-md-6 col-sm-6 col-xs-6" id="logout">
+	            <a href="logout.html">
+	            <div class="menu-icon">
+	               <i class="fa fa-lock"></i>
+	               <div class="icon-label">LOGOUT</div>
+	            </div>
+	            </a>
+	        </div>
+		
+	    </div><!-- row1  END-->
+    </div>
+
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <a class="forward" href="menu.html"><i class="fa fa-arrow-left"></i></a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+        
+        if(localStorage.login == 0){
+        	window.location = 'login.html';
+        }
+    });    
+    </script>
+</body>
+</html>

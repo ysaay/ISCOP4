@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Available Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+				<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+        
+        div.list {
+            margin-top: 35px;
+        }
+        
+        div.list > ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        
+        div.list > ul > li {
+            font-family: 'Open Sans';
+            font-weight: 100;
+            font-size: 16px;
+            /*text-align: center;*/
+            border-bottom: 1px solid rgba(165, 145, 0, 0.61);
+            padding: 15px 0px 15px 20px;
+        }
+        
+        div.list > ul > li > a {
+            display: block;
+            text-decoration: none;
+            color: #3F3F3F;
+        }
+        div.list > ul > li > a > i {
+            margin-right: 10px;
+        }
+		.pull-right {
+			float:right !important;
+		}
+		.time {
+			padding-right: 15px;
+		}
+		.back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+    </style>
+</head>
+<body class="animated fadeIn">
+    <!-- START -->
+    <div data-role="header" data-theme="b"  align="center" data-position="fixed" style="height:12%;">
+       <img src="img/banner1.PNG" width="100%"/>
+    </div>
+    <!--END -->
+    
+    <div class="list">
+        <ul id="available-sched">
+         </ul>
+    </div>
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+        
+        availableSched = JSON.parse(localStorage.availableSched);
+        
+        $('#available-sched').html('');
+        $.each(availableSched, function(i,v){
+        	$('#available-sched').append('<li><i class="fa fa-clock"></i> '+ v.day +'<span class="pull-right time">'+ v.time +'</span></li>');
+        })
+        
+    });    
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<html>
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+		<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+		
+		div.list {
+			margin-top: 40px;
+		}
+		
+		div.form-container {
+			margin: 10px 10px;
+			padding: 5px 10px;
+			background: rgba(0,0,0,0.3);
+			font-family: 'Open Sans';
+			color: #E8E8E8;
+		}
+		
+    </style>
+</head>
+<body class="animated fadeIn">
+    <!-- START -->
+    <div data-role="header" data-theme="b"  align="center" data-position="fixed" style="height:12%;">
+       <img src="img/banner1.PNG" width="100%"/>
+    </div>
+    <!--END -->
+	
+    <form id="student-form">
+    <div class="list">
+    	<div class="form-container hide" id="form-error-container">
+	    	<div class="form-group">
+				<label id="form-error"></label>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>STUDENT #</label>
+				<input name="data[User][username]" class="form-control" required>
+			</div>	
+    	</div>
+		
+		<div class="form-container">
+	    	<div class="form-group">
+				<label>LAST NAME</label>
+				<input name="data[User][last_name]" class="form-control" required>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>FIRST NAME</label>
+				<input name="data[User][first_name]" class="form-control" required>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>MIDDLE NAME</label>
+				<input name="data[User][middle_name]" class="form-control">
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>COURSE</label>
+				<select name="data[Student][course]" class="form-control" required>
+					<option value="">SELECT COURSE</option>
+					<option>ACT</option>
+					<option>BSed</option>
+					<option>BSA</option>
+					<option>BSBM</option>
+					<option>BSCA</option>
+					<option>BSIT</option>
+					<option>BSN</option>
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>YEAR LEVEL</label>
+				<select name="data[Student][year_level]" class="form-control" required>
+					<option value="">SELECT YEAR</option>
+					<option>1ST YEAR</option>
+					<option>2ND YEAR</option>
+					<option>3RD YEAR</option>
+					<option>4TH YEAR</option>
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>SCHOLAR TYPE</label>
+				<select name="data[Student][scholar_type]" class="form-control" required>
+					<option value="">SELECT TYPE</option>
+					<option>GRANTEE</option>
+					<option>ACADEMICS</option>
+					<option>MARCHING BAND</option>
+					<option>VARSITY</option>
+					<option>CULTURE AND ARTS</option>
+				</select>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>PASSWORD</label>
+				<input name="data[User][password]" class="form-control password" type="password" required>
+			</div>	
+    	</div>
+    	
+    	<div class="form-container">
+	    	<div class="form-group">
+				<label>RETYPE PASSWORD</label>
+				<input name="data[Retype][password]" class="form-control retype-password" type="password" required>
+			</div>	
+    	</div>
+    	
+    	
+    	<div class="form-container">
+	    	<button class="btn btn-primary btn-block">REGISTER</button>
+    	</div>
+    </div>
+    <input type="reset" id="reset" class="hide">
+	</form>
+	
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    
+    <script src="plugins/bootstrap-3.2/js/bootstrap.min.js"></script>
+    <script>
+    function error($message){
+    	$('#form-error').html($message);
+    	$('#form-error-container').removeClass('hide');
+    }
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+        
+	    $("#student-form").bind("submit", function (event){
+	    	if($('.password').val() != $('.retype-password').val()){
+	    		error('Password does not match.');
+	    	}else{
+		        $.ajax({
+		            type:"POST", url: api + 'register',
+		            data: $('#student-form').serialize(), dataType: "json",
+		            success:function (data) {
+		            	if(data.response == 'success') {
+		            		$('#reset').click();
+		            		error('Registration was successful.');
+		            	} else {
+		            		alert(data.message);
+		            	}
+						console.log(data);
+		           },
+		        });
+	    	}
+
+	        return false;
+	    });
+    });    
+    </script>
+</body>
+</html>

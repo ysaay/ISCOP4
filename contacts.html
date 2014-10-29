@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+		<!--bootstrap plugin START -->
+	<link rel="stylesheet" href="plugins/bootstrap-3.2/css/bootstrap.min.css" />
+	<script src="plugins/bootstrap-3.2/js/bootstrap.js"></script>
+	<!--bootstrap plugin END -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background: #F1C40F;
+        }
+        .header {
+            height: 35px;
+            width: 100%;
+            background: #3F3F3F;
+            position: fixed;
+            top: 0px;
+            z-index: 1;
+            
+            text-align: center;
+        }
+        .app-title {
+            padding-top: 8px;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 13px;
+            color: #C2C2C2;
+        }
+
+        .back {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            left: 15px;
+            color: #C2C2C2;
+        }
+        .menu {
+            position: fixed;
+            z-index: 1;
+            top: 10px;
+            right: 15px;
+            color: #C2C2C2;
+        }
+		.text-center {
+			text-align:center;
+		}
+		
+		.opensans {
+			font-family: 'Open Sans';
+		}
+    </style>
+</head>
+<body class="animated fadeIn">
+    <!-- START -->
+    <div data-role="header" data-theme="b"  align="center" data-position="fixed" style="height:12%;">
+       <img src="img/banner1.PNG" width="100%"/>
+    </div>
+    <!--END -->
+    <div class="list">
+    	<div class="text-center opensans" style="margin-top: 15px;"><img src="img/home.png" style="border-radius:50%"></div>
+		<div class="text-center opensans" style="margin-top:15px; font-size:20px;">Old Hospital Road , East Tapinac</div>
+		<div class="text-center opensans" style="font-size:20px;">Olongapo City</div>
+	
+	
+		<div>
+			<div class="text-center" style="margin-top:30px;"><img src="img/coordinator.png" style="border-radius:50%"/></div>
+			<div class="text-center opensans" style=" font-size:20px;">Ms. Lovelyn Ceralde</div>
+			<div class="text-center opensans" style="font-size:20px;">Coordinator of SAO</div>
+			<div class="text-center opensans" style="font-size:20px;">(+63)9294119111</div>
+		</div>
+    </div>
+	<!--STARTT menu-->
+		<div class="">
+			<a href="menu.html">
+				<button class="btn col-lg-15 col-md-15 col-sm-15 col-xs-15 btn-success"><i class="fa fa-bars"></i> Menu</button>
+			</a>
+		</div>
+		<!-- end Menu -->
+    <a class="menu" href="menu.html"><i class="fa fa-bars"></i></a>
+    <script>
+    $(document).ready(function(){
+        $('.menus').height($(window).height()-35);
+        $(window).resize(function(){
+            $('.menus').height($(window).height()-35);
+        });
+    });    
+    </script>
+</body>
+</html>
